@@ -2,11 +2,13 @@
 
 class StringCalculator
   def add(input)
-    if input == ''
-      return 0
-    else input.to_i
+    separated_string = input.split(',')
+    sum = 0
+    separated_string.each do |number|
+      sum += number.to_i
     end
+    sum
   end
   string_calculator = StringCalculator.new
-  p string_calculator.add('1')
+  p string_calculator.add('1,2')
 end
